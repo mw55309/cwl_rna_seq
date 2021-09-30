@@ -1,0 +1,6 @@
+inurl: "http://ftp.ensembl.org/pub/release-104/fasta/gallus_gallus/dna/Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
+inout: "Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
+index: "Gallus_gallus.GRCg6a.dna.toplevel.kidx"
+runid: "ERR1328537"
+runfastq: "ERR1328537.fastq.gz"
+runquant: "ERR1328537.quant"
