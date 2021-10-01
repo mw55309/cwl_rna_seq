@@ -1,6 +1,23 @@
-inurl: "http://ftp.ensembl.org/pub/release-104/fasta/gallus_gallus/dna/Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
-inout: "Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
-index: "Gallus_gallus.GRCg6a.dna.toplevel.kidx"
+reference_url: "http://ftp.ensembl.org/pub/release-104/fasta/gallus_gallus/dna/Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
+reference_filename: "Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
+index_filename: "Gallus_gallus.GRCg6a.dna.toplevel.kidx"
+fastq_filename: "Gallus_gallus.GRCg6a.dna.toplevel.fa.gz"
+
+runfastq_filename: "ERR1328537.fastq.gz"
 runid: "ERR1328537"
-runfastq: "ERR1328537.fastq.gz"
 runquant: "ERR1328537.quant"
+
+# Optional inputs, uncomment if you have them already & then it will
+# skip the associated step.
+
+# reference:
+#   class: File
+#   location: Gallus_gallus.GRCg6a.dna.toplevel.fa.gz
+
+# runfastq:
+#   class: File
+#   location: ERR1328537.fastq.gz
+
+# index:
+#   class: File
+#   location: Gallus_gallus.GRCg6a.dna.toplevel.kidx

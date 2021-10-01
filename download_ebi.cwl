@@ -1,20 +1,26 @@
 #!/usr/bin/env cwl-runner
 
-cwlVersion: v1.2.0-dev1
+cwlVersion: v1.2
 class: CommandLineTool
-baseCommand: ['/home/ubuntu/cwl_attempts/download_ebi.sh']
 inputs:
-  runid:
-    type: string
-    inputBinding:
-      position: 50
-  outfile:
-    type: string
-    inputBinding:
-      position: 100
+  runid: string
+  outfile: string
+  script:
+    type: File
+    default:
+      class: File
+      location: download_ebi.sh
+
+arguments: [$(inputs.script), $(inputs.runid), $(inputs.outfile)]
 
 outputs:
   fqone:
     type: File
     outputBinding:
-      glob: "$(inputs.outfile)" 
+      glob: "$(inputs.outfile)"
+
+requirements:
+  DockerRequirement:
+    dockerPull: "quay.io/biocontainers/curl:7.62.0"
+  NetworkAccess:
+    networkAccess: true
