@@ -1,8 +1,8 @@
 #!/usr/bin/env cwl-runner
 
-cwlVersion: v1.2.0-dev1
+cwlVersion: v1.2
 class: CommandLineTool
-baseCommand: wget
+baseCommand: curl
 inputs:
   url:
     type: string
@@ -11,10 +11,16 @@ inputs:
   out:
     type: string
     inputBinding:
-      prefix: -O
+      prefix: -o
 
 outputs:
   downloaded_file:
     type: File
     outputBinding:
       glob: "$(inputs.out)"
+
+requirements:
+  DockerRequirement:
+    dockerPull: "quay.io/biocontainers/curl:7.62.0"
+  NetworkAccess:
+    networkAccess: true
